@@ -1,0 +1,115 @@
+﻿body.modal-open {
+    margin-right: 0px;
+}
+.modal-backdrop {
+    background: #F4F4F8;
+}
+
+.modal-dialog {
+    min-width: 600px;
+    padding: 0px;
+}
+
+.modal-content {
+    background: #fff;
+    /*background: #F9F5E9;*/
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.4);
+    box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14),0 3px 14px 2px rgba(0,0,0,0.12),0 5px 5px -3px rgba(0,0,0,0.4);
+}
+
+.modal-dialog {
+    box-shadow: 0 2px 5px 1px #d6d6d6;
+}
+
+    .modal-dialog .modal-header {
+        border-bottom: none;
+        padding: 25px 30px;
+        border-bottom: 1px solid #eee;
+        height: 75px;
+        font-size: 24px;
+    }
+
+    .modal-dialog .modal-header {
+        padding-right: 180px;
+    }
+
+        .modal-dialog .modal-header img {
+            margin-top: 5px;
+        }
+
+            .modal-dialog .modal-header img.cross {
+                height: 20px;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+
+                .modal-dialog .modal-header img.cross:hover {
+                    opacity: 1;
+                }
+
+        .modal-dialog .modal-header .head {
+            margin-left: 20px;
+        }
+
+    .modal-dialog .modal-body {
+        padding: 25px 180px 25px 20px;
+    }
+
+.modal {
+    text-align: center;
+}
+
+.modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+    margin-top: -50px;
+}
+
+    .modal-dialog .fa-close {
+        top: 4px;
+        position: relative;
+        right: 4px;
+        color: #ddd;
+    }
+
+        .modal-dialog .fa-close:hover {
+            color: #fff;
+            cursor: pointer;
+        }
+
+    .modal-dialog .project-name {
+        width: 600px;
+    }
+
+    .modal-dialog .btn {
+        min-width: 150px;
+    }
+
+    .modal-dialog textarea {
+        height: 250px;
+    }
+
+.modal-dialog {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    left: 145px;
+}
+
+.modal-content {
+    border-radius: 0px;
+    border: none;
+    height: 100%;
+}
+
+.modal-dialog .modal-header, .modal-dialog .modal-content {
+}
+
+.modal.fade:not(.in) .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
+}

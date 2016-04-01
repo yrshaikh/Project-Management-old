@@ -1,0 +1,56 @@
+﻿html, body {
+    background: #EDEFF5;
+}
+
+.body-content {
+    margin-top: 100px;
+}
+
+.register-form {
+    width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 3px;
+}
+
+.register-form-submit-button {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px 15px;
+}
+
+.register-form-header {
+    text-align: center;
+    color: #565656;
+    margin: 0 auto 35px;
+    font-size: 35px;
+    line-height: 38px;
+}
+
+input[type=text], input[type=password] {
+    background: #fcfcfc;
+    border: 2px solid #e7e7e7;
+    margin: 5px auto;
+    padding: 15px;
+    width: 100%;
+    display: block;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: opacity 0.4s;
+    text-align: left;
+    height: auto;
+    -webkit-appearance: none;
+}
+
+.validation-summary-errors {
+    font-size: 18px;
+}
+
+    .validation-summary-errors ul {
+        padding-left: 0px;
+    }
+
+        .validation-summary-errors ul li {
+            list-style: none;
+        }

@@ -1,0 +1,15 @@
+﻿.empty-team-img {
+    opacity: 0.4;
+}
+
+.create-team-wrapper {
+    text-align: center;
+}
+
+.create-team-header {
+    font-size: 32px;
+}
+
+.create-team-modal input[type=text] {
+    width: 400px;
+}

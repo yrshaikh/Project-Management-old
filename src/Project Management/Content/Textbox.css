@@ -1,0 +1,14 @@
+﻿input[type=text].large-textbox {
+    background: #fcfcfc;
+    border: 2px solid #e7e7e7;
+    padding: 15px;
+    display: block;
+    border-radius: 3px;
+    font-size: 18px;
+    transition: opacity 0.4s;
+    text-align: left;
+    height: auto;
+    -webkit-appearance: none;
+}
+
+.form-control:focus { box-shadow: none;border: 2px solid #d7d7d7;}

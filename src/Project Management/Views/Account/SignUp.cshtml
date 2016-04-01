@@ -1,0 +1,37 @@
+﻿@model Project_Management.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+}
+
+@using (Html.BeginForm("SignUp", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="register-form">
+        @Html.AntiForgeryToken()
+        <div class="register-form-header">Sign Up.</div>
+        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.FirstName, new {@class = "form-control", placeholder = "First Name"})
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email Address" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success register-form-submit-button" value="Sign Up" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,21 @@
+﻿.navbar-inverse {
+    background: #2F323B;
+}
+
+    .navbar-inverse .navbar-nav>li>a, .navbar>.container .navbar-brand {
+        color: #b4b4b4;
+    }
+
+.btn-gray {
+    color: #fff;
+    background: linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,.3) 100%);
+    margin-top: 9px;
+    margin-left: 10px;
+    border: 1px solid #333740;
+}
+
+.btn-gray:hover {
+    background: linear-gradient(to bottom,rgba(255,255,255,.5) 0,rgba(255,255,255,.4) 100%);
+    color: #fff;
+    border: 1px solid #222;
+}

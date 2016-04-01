@@ -1,0 +1,26 @@
+﻿@model dynamic
+
+@{
+    Layout = null;
+}
+<div class="modal-header">
+    <img class="pull-left" src="/stylesheets/images/new-project.png" />
+    <div class="head pull-left">Create a new team</div>
+    <img class="pull-right cross" src="/stylesheets/images/cross.png" ng-click="cancel()" />
+</div>
+<div class="modal-body create-team-modal">
+    <form ng-init="init()">
+        <div class="form-group">
+            <label>What would you like to call this project?</label>
+            <input type="text" class="form-control large-textbox" ng-model="project.name" autofocus required="">
+        </div>
+        <button ng-hide="project.saving" type="submit" class="btn btn-success btn-lg"
+                ng-click="saveProject();" ng-disabled="!project.name">
+            SAVE PROJECT
+        </button>
+        <button ng-show="project.saving" class="btn btn-success btn-lg" disabled="disabled">SAVING...</button>
+        <button ng-hide="project.saving" class="btn-link btn-lg" ng-click="cancel();">Cancel</button>
+        <div ng-show="project.saveFailure" class="text-danger mb10">Oops! This is embarassing, something went wrong. Please try again.</div>
+        <div ng-show="project.saveFailureDuplicate" class="text-danger mb10">A project with same name already exits. Please try again with a different name.</div>
+    </form>
+</div>
