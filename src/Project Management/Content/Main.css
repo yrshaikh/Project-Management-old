@@ -1,1 +1,7 @@
-﻿.body-content{ margin-top: 100px;}
+﻿.body-content {
+    margin-top: 100px;
+}
+
+body {
+    background: url('/content/images/background.png');
+}

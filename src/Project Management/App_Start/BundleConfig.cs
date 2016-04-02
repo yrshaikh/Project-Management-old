@@ -23,6 +23,8 @@ namespace Project_Management
                         
                         "~/Scripts/app/app.js",
 
+                        "~/Scripts/app/filters/two-letter-filter.js",
+
                         "~/Scripts/app/services/team-service.js",
 
                         "~/Scripts/app/controllers/dashboard-controller.js",
@@ -47,7 +49,8 @@ namespace Project_Management
                       "~/Content/Team.css",
                       "~/Content/Buttons.css",
                       "~/Content/Textbox.css",
-                      "~/Content/Popup.css"
+                      "~/Content/Popup.css",
+                      "~/Content/Card.css"
                       ));
 
             bundles.Add(new StyleBundle("~/Content/unauthenticated").Include(

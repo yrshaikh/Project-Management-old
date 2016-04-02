@@ -210,6 +210,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Team\CreateTeamModel.cs" />
+    <Compile Include="Models\Team\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -217,8 +218,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Buttons.css" />
+    <Content Include="Content\Card.css" />
+    <Content Include="Content\images\background.png" />
     <Content Include="Content\images\bell.png" />
     <Content Include="Content\images\cross.png" />
+    <Content Include="Content\images\noise.png" />
     <Content Include="Content\images\people.png" />
     <Content Include="Content\Main.css" />
     <Content Include="Content\Layout.css" />
@@ -243,7 +247,7 @@
     <Content Include="Scripts\app - oldcopy\controllers\project-issues-controller.js" />
     <Content Include="Scripts\app - oldcopy\controllers\project-settings-controller.js" />
     <Content Include="Scripts\app - oldcopy\controllers\project-team-controller.js" />
-    <Content Include="Scripts\app - oldcopy\filters\two-letter-filter.js" />
+    <Content Include="Scripts\app\filters\two-letter-filter.js" />
     <Content Include="Scripts\app - oldcopy\services\project-service.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\dashboard-controller.js" />
@@ -327,7 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\app\filters\" />
+    <Folder Include="Scripts\app - oldcopy\filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

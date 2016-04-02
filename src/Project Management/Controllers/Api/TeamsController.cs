@@ -17,9 +17,30 @@ namespace Project_Management.Controllers.Api
         private ProjectManagementDbEntities db = new ProjectManagementDbEntities();
 
         // GET: api/Teams
-        public IQueryable<Team> GetTeams()
+        public List<TeamModel> GetTeams()
         {
-            return db.Teams;
+            string userId = User.Identity.GetUserId();
+            List<int> teamIds = db.TeamUserMappings.Where(x => x.UserId == userId).Select(x => x.TeamId).ToList();
+            List<TeamUserMapping> teamUserMappings = db.TeamUserMappings
+                .Include(x => x.AspNetUser)
+                .Include(x => x.Team)
+                .Where(x => teamIds.Contains(x.TeamId))
+                .ToList();
+
+            List<TeamModel> teams = teamUserMappings
+                .GroupBy(x => x.TeamId, x => x.Team, (key, g) => new TeamModel
+                {
+                    Id = key,
+                    Name = teamUserMappings.First(y => y.TeamId == key).Team.Name,
+                    LastUpdated = teamUserMappings.First(y => y.TeamId == key).Team.UpdatedDate,
+                    Members = teamUserMappings.Where(y => y.TeamId == key).Select(z => new TeamMembers
+                    {
+                        Name = String.Format("{0} {1}", z.AspNetUser.FirstName, z.AspNetUser.LastName),
+                        Email = z.AspNetUser.Email
+                    }).ToList()
+                }).ToList();
+                
+            return teams;
         }
 
         // GET: api/Teams/5
@@ -93,7 +114,7 @@ namespace Project_Management.Controllers.Api
                     }
                 }
             };
-            
+
             db.Teams.Add(team);
             db.SaveChanges();
 
