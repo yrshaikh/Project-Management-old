@@ -20,8 +20,14 @@ namespace Project_Management
                         "~/Scripts/angular-ui.js",
                         "~/Scripts/angular-ui-router.js",
                         "~/Scripts/ui-bootstrap-tpls-0.11.0.js",
+                        
                         "~/Scripts/app/app.js",
-                        "~/Scripts/app/controllers/dashboard-controller.js"
+
+                        "~/Scripts/app/services/team-service.js",
+
+                        "~/Scripts/app/controllers/dashboard-controller.js",
+                        "~/Scripts/app/controllers/new-team-controller.js"
+
                         ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

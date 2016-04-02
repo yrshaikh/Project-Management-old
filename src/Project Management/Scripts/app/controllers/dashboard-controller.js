@@ -8,7 +8,7 @@ angular.module('project-management').controller('DashboardController',
 	$scope.create = function () {
 		var modalInstance = $modal.open({
 			templateUrl: '/template/createteam',
-			//controller: 'NewProjectController',
+		    controller: 'CreateNewTeamController',
 			//size: 'lg',
 			animation: false,
 			resolve: {

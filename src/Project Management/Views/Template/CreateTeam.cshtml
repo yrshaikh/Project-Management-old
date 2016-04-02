@@ -4,23 +4,21 @@
     Layout = null;
 }
 <div class="modal-header">
-    <img class="pull-left" src="/stylesheets/images/new-project.png" />
     <div class="head pull-left">Create a new team</div>
-    <img class="pull-right cross" src="/stylesheets/images/cross.png" ng-click="cancel()" />
+    <img class="pull-right popup-cross-image" src="/Content/images/cross.png" ng-click="cancel()" />
 </div>
 <div class="modal-body create-team-modal">
     <form ng-init="init()">
+        <p>A team is a group of people, among whom tasks, notes, files & documents can be shared.</p>
         <div class="form-group">
-            <label>What would you like to call this project?</label>
-            <input type="text" class="form-control large-textbox" ng-model="project.name" autofocus required="">
+            <input type="text" class="form-control large-textbox" ng-model="team.name" autofocus required="" placeholder="Enter your team name eg: 'Fast devs'">
         </div>
-        <button ng-hide="project.saving" type="submit" class="btn btn-success btn-lg"
-                ng-click="saveProject();" ng-disabled="!project.name">
-            SAVE PROJECT
+        <button ng-hide="team.saving" type="submit" class="btn btn-success btn-lg"
+                ng-click="createNewTeam();" ng-disabled="!team.name">
+            Create New Team
         </button>
-        <button ng-show="project.saving" class="btn btn-success btn-lg" disabled="disabled">SAVING...</button>
-        <button ng-hide="project.saving" class="btn-link btn-lg" ng-click="cancel();">Cancel</button>
-        <div ng-show="project.saveFailure" class="text-danger mb10">Oops! This is embarassing, something went wrong. Please try again.</div>
-        <div ng-show="project.saveFailureDuplicate" class="text-danger mb10">A project with same name already exits. Please try again with a different name.</div>
+        <button ng-show="team.saving" class="btn btn-success btn-lg" disabled="disabled">Creating...</button>
+        <span ng-hide="team.saving" class="link" ng-click="cancel();">Cancel</span>
+        <div ng-show="team.saveFailure" class="text-danger mb10">Oops! This is embarassing, something went wrong. Please try again.</div>
     </form>
 </div>
