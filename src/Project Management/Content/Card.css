@@ -4,7 +4,7 @@
     margin-bottom: 30px;
     height: 200px;
     padding: 20px;
-    width: 260px;
+    width: 270px;
 }
 
 .card {
@@ -60,10 +60,14 @@
     color: #333333;
 }
 
-.card-anchor:hover .card-member-name, .card-anchor:hover .card-members{
+.card-anchor:hover p{
     color: #333;
 }
 
 .card-anchor:hover .card-team-name{
     text-decoration: underline;
+}
+
+.card-last-updated {
+    margin-bottom: 2px; 
 }

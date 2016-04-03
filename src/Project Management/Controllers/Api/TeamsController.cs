@@ -9,6 +9,7 @@ using System.Web.Http.Description;
 using Microsoft.AspNet.Identity;
 using Project_Management.Data;
 using Project_Management.Models.Team;
+using Project_Management.Utils.Date;
 
 namespace Project_Management.Controllers.Api
 {
@@ -32,7 +33,7 @@ namespace Project_Management.Controllers.Api
                 {
                     Id = key,
                     Name = teamUserMappings.First(y => y.TeamId == key).Team.Name,
-                    LastUpdated = teamUserMappings.First(y => y.TeamId == key).Team.UpdatedDate,
+                    LastUpdated = DateHelper.ToRelativeDate(teamUserMappings.First(y => y.TeamId == key).Team.UpdatedDate.Value),
                     Members = teamUserMappings.Where(y => y.TeamId == key).Select(z => new TeamMembers
                     {
                         Name = String.Format("{0} {1}", z.AspNetUser.FirstName, z.AspNetUser.LastName),

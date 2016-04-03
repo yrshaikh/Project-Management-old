@@ -1,2 +1,12 @@
-﻿.link {color: #2a6496;font-size: 18px;padding: 6px 12px;text-align: center;text-decoration: underline;cursor: pointer;}
-.link:hover{ text-decoration:none;}
+﻿.link {
+    color: #2a6496;
+    font-size: 18px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+    .link:hover {
+        text-decoration: none;
+    }

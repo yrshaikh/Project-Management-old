@@ -2,20 +2,48 @@
     background: #2F323B;
 }
 
-    .navbar-inverse .navbar-nav>li>a, .navbar>.container .navbar-brand {
+    .navbar-inverse .navbar-nav > li > a, .navbar > .container .navbar-brand {
         color: #b4b4b4;
     }
 
+    .navbar-inverse .navbar-nav > .open > a {
+        background: #222 !important;
+        border: 1px solid #222 !important;
+    }
+
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 7px;
+}
+
 .btn-gray {
-    color: #fff;
+    color: #fff !important;
     background: linear-gradient(to bottom,rgba(255,255,255,.4) 0,rgba(255,255,255,.3) 100%);
     margin-top: 9px;
     margin-left: 10px;
     border: 1px solid #333740;
+    padding: 6px 12px !important;
 }
 
-.btn-gray:hover {
-    background: linear-gradient(to bottom,rgba(255,255,255,.5) 0,rgba(255,255,255,.4) 100%);
-    color: #fff;
-    border: 1px solid #222;
+    .btn-gray:hover, .btn-gray:focus {
+        background: linear-gradient(to bottom,rgba(255,255,255,.5) 0,rgba(255,255,255,.4) 100%) !important;
+        color: #fff !important;
+        border: 1px solid #222 !important;
+    }
+
+.nav-dropdown-menu {
+    border-radius: 2px;
+    left: 10px;
+    min-width: 300px;
+}
+
+    .nav-dropdown-menu > li > a {
+        padding: 12px 20px;
+        background: #EDEFF5;
+        margin-bottom: 5px;
+        margin: 10px;
+        border-radius: 2px;
+    }
+
+.open .dropdown-toggle.btn-default {
+    color: #333;
 }

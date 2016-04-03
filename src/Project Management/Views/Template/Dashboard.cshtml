@@ -5,18 +5,22 @@
 }
 <div ng-init="init()">
     <div ng-show="teams.loading">Loading...</div>
-    <a class="card-anchor" href="/" ng-show="!teams.loading && teams.data.length != 0" ng-repeat="item in teams.data">
+    <div class="clearfix create-team-button-holder">
+        <button class="btn btn-success" ng-click="create()">Create my new team</button>
+    </div>
+    <a class="card-anchor" href="#/{{item.id}}/tasks" ng-show="!teams.loading && teams.data.length != 0" ng-repeat="item in teams.data">
         <div class="card">
             <p class="card-team-name">{{item.n}}</p>
+            <p class="card-last-updated">Last updated {{item.u}}</p>
             <p class="card-members">{{item.m.length}} member(s)</p>
             <p>
-                <span title="{{m.n}}" class="card-member-name" ng-repeat="m in item.m">{{m.n | twoletter}}</span>  
+                <span title="{{m.n}}" class="card-member-name" ng-repeat="m in item.m">{{m.n | twoletter}}</span>
             </p>
         </div>
     </a>
     <div ng-show="!teams.loading && teams.data.length == 0" class="row create-team-wrapper">
         <p class="create-team-header">Create a new team</p>
-        <img class="empty-team-img" src="/Content/images/people.png"/>
+        <img class="empty-team-img" src="/Content/images/people.png" />
         <div>
             <p>A team is a group of people, among whom tasks, notes, files & documents can be shared.</p>
             <button class="btn btn-success" ng-click="create()">Create my new team</button>

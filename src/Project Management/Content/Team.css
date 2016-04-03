@@ -4,6 +4,8 @@
 
 .create-team-wrapper {
     text-align: center;
+    background: #fff;
+    padding: 25px;
 }
 
 .create-team-header {
@@ -12,4 +14,8 @@
 
 .create-team-modal input[type=text] {
     width: 400px;
+}
+
+.create-team-button-holder {
+    margin-bottom: 25px;
 }

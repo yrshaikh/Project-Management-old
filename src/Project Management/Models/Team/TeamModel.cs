@@ -13,7 +13,7 @@ namespace Project_Management.Models.Team
         public string Name { get; set; }
 
         [JsonProperty("u")]
-        public DateTime? LastUpdated { get; set; }
+        public string LastUpdated { get; set; }
 
         [JsonProperty("m")]
         public List<TeamMembers> Members { get; set; } 

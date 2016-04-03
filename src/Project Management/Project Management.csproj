@@ -213,6 +213,7 @@
     <Compile Include="Models\Team\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\Date\DateHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -326,8 +327,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Team\Index.cshtml" />
+    <Content Include="Views\Shared\_Navigation.cshtml" />
     <None Include="Views\Template\CreateTeam.cshtml" />
     <None Include="Views\Template\Dashboard.cshtml" />
+    <None Include="Views\Template\Tasks.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

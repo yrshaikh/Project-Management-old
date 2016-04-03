@@ -14,13 +14,13 @@ angular.module('project-management').controller('DashboardController',
 	    };
 
 	    teamService.getTeams()
-	        .then(function (response) {
+	        .then(function(response) {
 	            $scope.teams.loading = false;
-                if (response.status === 200) {
-                    $scope.teams.data = response.data;
-                } else {
-                    $scope.teams.error = true;
-                }
+	            if (response.status === 200) {
+	                $scope.teams.data = response.data;
+	            } else {
+	                $scope.teams.error = true;
+	            }
 	        });
 	}
 
