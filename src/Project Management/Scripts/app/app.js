@@ -10,6 +10,16 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
         .state('tasks', {
             url: '/:id/tasks',
             templateUrl: '/template/tasks',
-            controller: 'DashboardController'
+            controller: 'TasksController'
+        })
+        .state('people', {
+            url: '/:id/people',
+            templateUrl: '/template/people',
+            controller: 'PeopleController'
+        })
+        .state('notes', {
+            url: '/:id/notes',
+            templateUrl: '/template/tasks',
+            controller: 'TasksController'
         });
 });

@@ -1,9 +1,14 @@
 ﻿.navbar-inverse {
-    background: #2F323B;
+    background: #333333;
 }
 
     .navbar-inverse .navbar-nav > li > a, .navbar > .container .navbar-brand {
-        color: #b4b4b4;
+        color: #999;
+    }
+
+    .navbar-inverse .navbar-nav > li > a.active {
+        color: #fff;
+        text-decoration: underline;
     }
 
     .navbar-inverse .navbar-nav > .open > a {

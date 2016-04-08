@@ -19,6 +19,16 @@ namespace Project_Management.Controllers
         {
             return View();
         }
+
+        public ActionResult People()
+        {
+            return View();
+        }
+
+        public ActionResult Notes()
+        {
+            return View();
+        }
         #endregion
     }
 }

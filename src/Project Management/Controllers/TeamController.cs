@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
@@ -26,6 +27,35 @@ namespace Project_Management.Controllers
                 .ToList();
             ViewBag.Teams = teamModel;
             return View();
+        }
+
+        public JsonResult GetNonMembersForAutocomplete(int teamId)
+        {
+            List<string> members = db.TeamUserMappings.Where(x => x.TeamId == teamId).Select(x => x.UserId).ToList();
+
+            var nonMembers = db.AspNetUsers
+                .Where(x => !members.Contains(x.Id))
+                .Select(x => new
+                {
+                    id = x.Id,
+                    text = x.FirstName + " " + x.LastName + "(" + x.Email + ")",
+                    name = x.FirstName + " " + x.LastName,
+                    email = x.Email
+                }).ToList();
+
+            return Json(nonMembers, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public void AddMember(NewTeamMember newTeamMember)
+        {
+            db.TeamUserMappings.Add(new TeamUserMapping
+            {
+                CreatedDate = DateTime.UtcNow,
+                TeamId = newTeamMember.TeamId,
+                UserId = newTeamMember.UserId
+            });
+            db.SaveChanges();
         }
     }
 }

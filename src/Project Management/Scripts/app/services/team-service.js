@@ -17,6 +17,19 @@ angular.module("project-management").factory('TeamService', ['$http', function (
                 url: '/api/teams',
                 method: 'GET'
             });
+        },
+        getTeamsMembers: function (id) {
+            return $http({
+                url: '/api/teampeople/' + id,
+                method: 'GET'
+            });
+        },
+        addMember: function (obj) {
+            return $http({
+                url: '/Team/AddMember/',
+                data: obj,
+                method: 'POST'
+            });
         }
     };
 }]);

@@ -3,7 +3,7 @@
     List<TeamModel> team = (List<TeamModel>) ViewBag.Teams;
 }
 <div>
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav inner-nav dnone">
         <li class="dropdown">
             <a href="#" class="dropdown-toggle btn btn-default btn-gray" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams <span class="caret"></span></a>
             <ul class="dropdown-menu nav-dropdown-menu">
@@ -12,6 +12,18 @@
                     <li ng-repeat="item in teams.data"><a href="/#@item.Id/tasks">@item.Name</a></li>
                 }
             </ul>
+        </li>
+        <li>
+            <a class="tasks" href="/">Tasks</a>
+        </li>
+        <li>
+            <a class="people" href="/">People</a>
+        </li>
+        <li>
+            <a class="notes" href="/">Notes</a>
+        </li>
+        <li>
+            <a class="files" href="/">Files & Documents</a>
         </li>
     </ul>
 </div>

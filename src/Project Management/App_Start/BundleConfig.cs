@@ -20,6 +20,8 @@ namespace Project_Management
                         "~/Scripts/angular-ui.js",
                         "~/Scripts/angular-ui-router.js",
                         "~/Scripts/ui-bootstrap-tpls-0.11.0.js",
+
+                        "~/Scripts/plugins/select2.js",
                         
                         "~/Scripts/app/app.js",
 
@@ -28,7 +30,10 @@ namespace Project_Management
                         "~/Scripts/app/services/team-service.js",
 
                         "~/Scripts/app/controllers/dashboard-controller.js",
-                        "~/Scripts/app/controllers/new-team-controller.js"
+                        "~/Scripts/app/controllers/new-team-controller.js",
+                        "~/Scripts/app/controllers/tasks-controller.js",
+                        "~/Scripts/app/controllers/people-controller.js",
+                        "~/Scripts/app/controllers/notes-controller.js"
 
                         ));
 
@@ -43,6 +48,7 @@ namespace Project_Management
 
             bundles.Add(new StyleBundle("~/Content/authenticated").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/select2/select2.css",
                       "~/Content/Font.css",
                       "~/Content/Header.css",
                       "~/Content/Main.css",
@@ -50,7 +56,8 @@ namespace Project_Management
                       "~/Content/Buttons.css",
                       "~/Content/Textbox.css",
                       "~/Content/Popup.css",
-                      "~/Content/Card.css"
+                      "~/Content/Card.css",
+                      "~/Content/People.css"
                       ));
 
             bundles.Add(new StyleBundle("~/Content/unauthenticated").Include(

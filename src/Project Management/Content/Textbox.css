@@ -11,4 +11,18 @@
     -webkit-appearance: none;
 }
 
-.form-control:focus { box-shadow: none;border: 2px solid #d7d7d7;}
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #d7d7d7;
+}
+
+.select2-container-multi .select2-choices {
+    border: 2px solid #e7e7e7;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.select2-container-multi .select2-choices:focus {
+    border: 2px solid #d7d7d7;
+}

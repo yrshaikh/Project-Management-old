@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+}
+<div ng-init="init()">
+    <div class="header people-header">Add people. The more, the merrier.</div>
+    <div class="clearfix add-people-block">
+        <input id="people" type="hidden" placeholder="Add people to your team..." style="width: 560px" />
+        <span class="text-danger" ng-if="newMember.error">
+            Oops! Something went wrong. Try again.
+        </span>
+    </div>
+    <div class="person card" ng-repeat="person in people.data">
+        <span class="name">{{person.n}}</span>
+        <span class="email">{{person.e}}</span>
+        <span class="remove">remove</span>
+    </div>
+</div>

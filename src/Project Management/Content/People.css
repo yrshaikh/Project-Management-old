@@ -1,0 +1,51 @@
+﻿.add-people-block {
+    margin-bottom: 10px;
+}
+
+.person {
+    font-size: 18px;
+    height: 110px;
+}
+
+    .person .name, .person .email {
+        float: left;
+        width: 100%;
+    }
+
+    .person .name {
+        font-weight: bold;
+    }
+
+    .person .email {
+        color: #999;
+        font-size: 14px;
+    }
+
+    .person .remove {
+        color: #962A2A;
+        text-decoration: underline;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+        .person .remove:hover {
+            text-decoration: none;
+        }
+
+            .person .remove:hover:after {
+                content: '?';
+            }
+
+
+.select2-result .add-person-name, .select2-result .add-person-email {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.people-header {
+    font-size: 18px;
+    border-bottom: 1px solid #dddddd;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}

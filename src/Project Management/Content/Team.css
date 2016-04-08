@@ -19,3 +19,9 @@
 .create-team-button-holder {
     margin-bottom: 25px;
 }
+
+.teams-header {
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+}

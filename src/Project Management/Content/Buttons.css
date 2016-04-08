@@ -10,3 +10,34 @@
     .link:hover {
         text-decoration: none;
     }
+
+
+.btn-light{  width:70px;
+  padding:5px;
+  border-radius:5px;
+   border:0 none;
+   color:#7f8084;
+   font-weight:bold;
+   font-size:13px;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e0e0e0+0,e0e0e0+52,d3d3d3+55,d3d3d3+100 */
+background: #e0e0e0; /* Old browsers */
+background: -moz-linear-gradient(top,  #e0e0e0 0%, #e0e0e0 52%, #d3d3d3 55%, #d3d3d3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #e0e0e0 0%,#e0e0e0 52%,#d3d3d3 55%,#d3d3d3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #e0e0e0 0%,#e0e0e0 52%,#d3d3d3 55%,#d3d3d3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0e0e0', endColorstr='#d3d3d3',GradientType=0 ); /* IE6-9 */
+border: none;
+}
+.btn-light:hover{background:#ccc; cursor:pointer;}
+
+.btn-primary{
+  color:#fff; 
+ 
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a5bc6c+0,a4bd6c+48,a4bd6a+52,99b35c+55,96b357+59,96b357+93,98b259+97,95b457+100 */
+background: #a5bc6c; /* Old browsers */
+background: -moz-linear-gradient(top,  #a5bc6c 0%, #a4bd6c 48%, #a4bd6a 52%, #99b35c 55%, #96b357 59%, #96b357 93%, #98b259 97%, #95b457 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #a5bc6c 0%,#a4bd6c 48%,#a4bd6a 52%,#99b35c 55%,#96b357 59%,#96b357 93%,#98b259 97%,#95b457 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #a5bc6c 0%,#a4bd6c 48%,#a4bd6a 52%,#99b35c 55%,#96b357 59%,#96b357 93%,#98b259 97%,#95b457 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a5bc6c', endColorstr='#95b457',GradientType=0 ); /* IE6-9 */
+    border: none;
+}
+.btn-primary:hover{background:#96b357;}

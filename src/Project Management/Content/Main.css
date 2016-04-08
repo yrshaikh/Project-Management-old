@@ -3,5 +3,10 @@
 }
 
 body {
-    background: url('/content/images/background.png');
+    /*background: url('/content/images/background.png');*/
+    background: #F4F4F4;
+}
+
+.dnone {
+    display: none;
 }

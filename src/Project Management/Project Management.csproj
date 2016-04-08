@@ -174,6 +174,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Api\TeamPeopleController.cs" />
     <Compile Include="Controllers\Api\TeamsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -210,6 +211,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Team\CreateTeamModel.cs" />
+    <Compile Include="Models\Team\NewTeamMember.cs" />
     <Compile Include="Models\Team\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -231,6 +233,11 @@
     <Content Include="Content\Login.css" />
     <Content Include="Content\Font.css" />
     <Content Include="Content\Popup.css" />
+    <Content Include="Content\People.css" />
+    <Content Include="Content\select2\select2-spinner.gif" />
+    <Content Include="Content\select2\select2.css" />
+    <Content Include="Content\select2\select2.png" />
+    <Content Include="Content\select2\select2x2.png" />
     <Content Include="Content\Team.css" />
     <Content Include="Content\Textbox.css" />
     <Content Include="favicon.ico" />
@@ -239,17 +246,9 @@
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui.js" />
     <Content Include="Scripts\angular.min.1.4.6.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\dashboard-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\forgot-password-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\new-issue-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\new-project-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\project-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\project-documents-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\project-issues-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\project-settings-controller.js" />
-    <Content Include="Scripts\app - oldcopy\controllers\project-team-controller.js" />
+    <Content Include="Scripts\app\controllers\people-controller.js" />
+    <Content Include="Scripts\app\controllers\tasks-controller.js" />
     <Content Include="Scripts\app\filters\two-letter-filter.js" />
-    <Content Include="Scripts\app - oldcopy\services\project-service.js" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controllers\dashboard-controller.js" />
     <Content Include="Scripts\app\controllers\new-team-controller.js" />
@@ -330,11 +329,13 @@
     <Content Include="Views\Shared\_Navigation.cshtml" />
     <None Include="Views\Template\CreateTeam.cshtml" />
     <None Include="Views\Template\Dashboard.cshtml" />
+    <Content Include="Views\Template\People.cshtml" />
+    <Content Include="Views\Template\Notes.cshtml" />
     <None Include="Views\Template\Tasks.cshtml" />
+    <Content Include="Views\Template\_TeamNavigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\app - oldcopy\filters\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
