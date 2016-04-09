@@ -26,5 +26,7 @@ namespace Project_Management.Models.Team
 
         [JsonProperty("e")]
         public string Email { get; set; }
+
+        public int MapId { get; set; }
     }
 }

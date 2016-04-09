@@ -20,6 +20,7 @@ namespace Project_Management.Controllers.Api
 
             List<TeamMembers> teamMembers = teamUserMappings.Select(x => new TeamMembers
             {
+                MapId = x.MapId,
                 Name = string.Format("{0} {1}", x.AspNetUser.FirstName, x.AspNetUser.LastName),
                 Email = x.AspNetUser.Email
             }).ToList();

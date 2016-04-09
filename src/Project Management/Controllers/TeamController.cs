@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Project_Management.Data;
@@ -47,7 +48,7 @@ namespace Project_Management.Controllers
         }
 
         [HttpPost]
-        public void AddMember(NewTeamMember newTeamMember)
+        public async Task<ActionResult> AddMember(NewTeamMember newTeamMember)
         {
             db.TeamUserMappings.Add(new TeamUserMapping
             {
@@ -55,7 +56,17 @@ namespace Project_Management.Controllers
                 TeamId = newTeamMember.TeamId,
                 UserId = newTeamMember.UserId
             });
-            db.SaveChanges();
+            await db.SaveChangesAsync();
+            return null;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> DeleteMember(DeleteTeamMember deleteTeamMember)
+        {
+            TeamUserMapping userMapping = db.TeamUserMappings.FirstOrDefault(x => x.MapId == deleteTeamMember.MapId);
+            db.TeamUserMappings.Remove(userMapping);
+            await db.SaveChangesAsync();
+            return null;
         }
     }
 }

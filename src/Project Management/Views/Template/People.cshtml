@@ -12,6 +12,6 @@
     <div class="person card" ng-repeat="person in people.data">
         <span class="name">{{person.n}}</span>
         <span class="email">{{person.e}}</span>
-        <span class="remove">remove</span>
+        <span ng-click="deleteMemeber(person)" class="remove">remove</span>
     </div>
 </div>

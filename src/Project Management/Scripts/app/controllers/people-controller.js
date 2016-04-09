@@ -6,13 +6,14 @@ angular.module('project-management').controller('PeopleController',
                 member: null
             };
             $scope.teamId = $stateParams.id;
-            loadMemberList($scope.teamId);
+            loadMemberList();
             $timeout(function() {
                 loadNewMemberList($scope.teamId);
             });
         }
 
-        var loadMemberList = function (teamId) {
+        var loadMemberList = function () {
+            var teamId = $scope.teamId;
             $scope.people = {
                 loading: true,
                 error: false,
@@ -74,14 +75,14 @@ angular.module('project-management').controller('PeopleController',
 
             teamService.addMember(teamMember)
                 .then(function (response) {
-                    resetSelect2Placeholder(identifier);
                     $scope.newMember.adding = false;
                     $scope.newMember.member = null;
-
                     if (response.status !== 200) {
                         $scope.newMember.error = true;
-                        $scope.init();
+                    } else {
+                        loadMemberList();
                     }
+                    resetSelect2Placeholder(identifier);
                 })
                 .catch(function () {
                     resetSelect2Placeholder(identifier);
@@ -90,9 +91,28 @@ angular.module('project-management').controller('PeopleController',
                 });
         }
 
+        $scope.deleteMemeber = function(member) {
+            var deleteConfirmed = confirm("Confirm delete ?");
+            if (deleteConfirmed) {
+                var memberToBeDeleted = {
+                    mapId: member.MapId
+                }
+                teamService.deleteMember(memberToBeDeleted)
+                    .then(function(response) {
+                        loadMemberList();
+                    })
+                    .catch(function() {
+                        alert("Something went wrong while removing member from the team.");
+                    });
+            }
+        }
+
         var resetSelect2Placeholder = function (identifier) {
-            $(identifier).select2('enable');
-            $(identifier).attr('placeholder', 'Add people to your team...');
-            $('.select2-placeholder').focus().blur();
+            setTimeout(function() {
+                $(identifier).attr('placeholder', 'Add people to your team...');
+                $('.select2-placeholder').focus().blur();
+                $(identifier).select2('enable');
+                $(identifier).select2("val", "");
+            }, 100);
         }
     }]);

@@ -30,6 +30,13 @@ angular.module("project-management").factory('TeamService', ['$http', function (
                 data: obj,
                 method: 'POST'
             });
+        },
+        deleteMember: function (obj) {
+            return $http({
+                url: '/Team/DeleteMember/',
+                data: obj,
+                method: 'POST'
+            });
         }
     };
 }]);
