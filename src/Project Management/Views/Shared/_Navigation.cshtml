@@ -1,29 +1,43 @@
 ﻿@using Project_Management.Models.Team
 @{
-    List<TeamModel> team = (List<TeamModel>) ViewBag.Teams;
+    List<TeamModel> team = (List<TeamModel>)ViewBag.Teams;
+    TeamModel selectedTeam = (TeamModel)ViewBag.SelectedTeam;
+    string selectedTeamStr = "Team";
+    int? selectedTeamId = null;
+    if (selectedTeam != null)
+    {
+        selectedTeamStr = selectedTeam.Name;
+        selectedTeamId = selectedTeam.Id;
+    }
 }
-<div>
-    <ul class="nav navbar-nav inner-nav dnone">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle btn btn-default btn-gray" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Teams <span class="caret"></span></a>
-            <ul class="dropdown-menu nav-dropdown-menu">
-                @foreach (var item in team)
-                {
-                    <li ng-repeat="item in teams.data"><a href="/#@item.Id/tasks">@item.Name</a></li>
-                }
-            </ul>
-        </li>
-        <li>
-            <a class="tasks" href="/">Tasks</a>
-        </li>
-        <li>
-            <a class="people" href="/">People</a>
-        </li>
-        <li>
-            <a class="notes" href="/">Notes</a>
-        </li>
-        <li>
-            <a class="files" href="/">Files & Documents</a>
-        </li>
+
+<div ng-controller="NavigationController" ng-init="init()">
+    <ul class="nav navbar-nav inner-nav">
+        @if (selectedTeam != null)
+        {
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle btn btn-default btn-gray" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@selectedTeamStr <span class="caret"></span></a>
+                <ul class="dropdown-menu nav-dropdown-menu">
+                    @foreach (TeamModel item in team)
+                    {
+                        <li><a href="/team/o/@item.Id#/tasks">@item.Name</a></li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <a class="tasks" href="/team/o/@selectedTeam.Id#/tasks">Tasks</a>
+            </li>
+            <li>
+                <a class="people" href="/team/o/@selectedTeam.Id#/people">People</a>
+            </li>
+            <li>
+                <a class="notes" href="/team/o/@selectedTeam.Id#/notes">Notes</a>
+            </li>
+        }
     </ul>
 </div>
+
+<script type="text/javascript">
+    window.yasser = 'shaikh';
+    window.selectedTeamId = '@selectedTeamId';
+</script>

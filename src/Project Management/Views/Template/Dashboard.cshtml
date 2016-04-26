@@ -9,7 +9,7 @@
         <button class="btn btn-success pull-right" ng-click="create()">Create my new team</button>
     </div>
     <div ng-show="teams.loading">Loading...</div>
-    <a class="card-anchor" href="#/{{item.id}}/tasks" ng-show="!teams.loading && teams.data.length != 0" ng-repeat="item in teams.data">
+    <a class="card-anchor" href="/team/o/{{item.id}}/#/tasks" ng-show="!teams.loading && teams.data.length != 0" ng-repeat="item in teams.data">
         <div class="card">
             <p class="card-team-name">{{item.n}}</p>
             <p class="card-last-updated">Last updated {{item.u}}</p>

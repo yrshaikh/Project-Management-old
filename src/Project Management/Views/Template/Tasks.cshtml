@@ -1,7 +1,23 @@
 ﻿@{
     Layout = null;
 }
-@Html.Partial("_TeamNavigation")
 <div ng-init="init()">
-    tasks
+    <div class="board">
+        <div class="columns">
+            <div class="list-wrapper" ng-repeat="item in lists">
+                <h4 class="lbl">{{item.title}} ({{item.children.length}})</h4>
+                <div class="column">
+                    <div class="portlet  ui-widget ui-widget-content" ng-repeat="card in item.children">
+                        <a class="portlet-content">
+                            {{card.title}}
+                        </a>
+                    </div>
+                </div>
+                <a class="new-task" ng-class="{'last-button': $last}">
+                    <span ng-if="!$last">Add new card</span>
+                    <span ng-if="$last">Archive all</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

@@ -29,6 +29,7 @@ namespace Project_Management
 
                         "~/Scripts/app/services/team-service.js",
 
+                        "~/Scripts/app/controllers/navigation-controller.js",
                         "~/Scripts/app/controllers/dashboard-controller.js",
                         "~/Scripts/app/controllers/new-team-controller.js",
                         "~/Scripts/app/controllers/tasks-controller.js",
@@ -49,6 +50,7 @@ namespace Project_Management
             bundles.Add(new StyleBundle("~/Content/authenticated").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/select2/select2.css",
+                      "~/Content/jqueryui/jquery-ui.css",
                       "~/Content/Font.css",
                       "~/Content/Header.css",
                       "~/Content/Main.css",
@@ -57,7 +59,8 @@ namespace Project_Management
                       "~/Content/Textbox.css",
                       "~/Content/Popup.css",
                       "~/Content/Card.css",
-                      "~/Content/People.css"
+                      "~/Content/People.css",
+                      "~/Content/Task.css"
                       ));
 
             bundles.Add(new StyleBundle("~/Content/unauthenticated").Include(

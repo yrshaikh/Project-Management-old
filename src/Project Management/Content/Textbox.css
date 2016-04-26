@@ -26,3 +26,7 @@
 .select2-container-multi .select2-choices:focus {
     border: 2px solid #d7d7d7;
 }
+
+.select2-container-multi .select2-choices {
+    background-image: none;
+}

@@ -1,11 +1,13 @@
 angular.module('project-management').controller('PeopleController',
-    ['$scope', '$stateParams', 'TeamService', '$timeout', function ($scope, $stateParams, teamService, $timeout) {
+    ['$scope', 'TeamService', '$timeout', function ($scope, teamService, $timeout) {
         $scope.init = function () {
+            $(".inner-nav li a").removeClass("active");
+            $(".inner-nav .people").addClass("active");
             $scope.newMember = {
                 adding: false,
                 member: null
             };
-            $scope.teamId = $stateParams.id;
+            $scope.teamId = window.selectedTeamId;
             loadMemberList();
             $timeout(function() {
                 loadNewMemberList($scope.teamId);

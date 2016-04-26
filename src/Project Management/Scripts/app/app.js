@@ -8,17 +8,17 @@ routerApp.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'DashboardController'
         })
         .state('tasks', {
-            url: '/:id/tasks',
+            url: '/tasks',
             templateUrl: '/template/tasks',
             controller: 'TasksController'
         })
         .state('people', {
-            url: '/:id/people',
+            url: '/people',
             templateUrl: '/template/people',
             controller: 'PeopleController'
         })
         .state('notes', {
-            url: '/:id/notes',
+            url: '/notes',
             templateUrl: '/template/tasks',
             controller: 'TasksController'
         });

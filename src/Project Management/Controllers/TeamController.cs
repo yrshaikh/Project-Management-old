@@ -16,6 +16,19 @@ namespace Project_Management.Controllers
         // GET: Team
         public ActionResult Index()
         {
+            FillViewBagWithProjectList();
+            return View();
+        }
+
+        public ActionResult O(int id)
+        {
+            List<TeamModel> teamModel = FillViewBagWithProjectList();
+            ViewBag.SelectedTeam = teamModel.FirstOrDefault(x => x.Id == id);
+            return View("Index");
+        }
+
+        private List<TeamModel> FillViewBagWithProjectList()
+        {
             string userId = User.Identity.GetUserId();
             List<TeamModel> teamModel = db.TeamUserMappings
                 .Include(x => x.Team)
@@ -27,7 +40,7 @@ namespace Project_Management.Controllers
                 })
                 .ToList();
             ViewBag.Teams = teamModel;
-            return View();
+            return teamModel;
         }
 
         public JsonResult GetNonMembersForAutocomplete(int teamId)
@@ -45,6 +58,17 @@ namespace Project_Management.Controllers
                 }).ToList();
 
             return Json(nonMembers, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public async Task<TeamModel> Get(int id)
+        {
+            Team team = await db.Teams.FirstOrDefaultAsync(x => x.Id == id);
+            return new TeamModel
+            {
+                Id = team.Id,
+                Name = team.Name
+            };
         }
 
         [HttpPost]

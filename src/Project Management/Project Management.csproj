@@ -228,6 +228,13 @@
     <Content Include="Content\images\cross.png" />
     <Content Include="Content\images\noise.png" />
     <Content Include="Content\images\people.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\jqueryui\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jqueryui\jquery-ui.css" />
     <Content Include="Content\Main.css" />
     <Content Include="Content\Layout.css" />
     <Content Include="Content\Header.css" />
@@ -239,6 +246,7 @@
     <Content Include="Content\select2\select2.css" />
     <Content Include="Content\select2\select2.png" />
     <Content Include="Content\select2\select2x2.png" />
+    <Content Include="Content\Task.css" />
     <Content Include="Content\Team.css" />
     <Content Include="Content\Textbox.css" />
     <Content Include="favicon.ico" />
@@ -247,6 +255,7 @@
     <Content Include="Scripts\angular-ui-router.js" />
     <Content Include="Scripts\angular-ui.js" />
     <Content Include="Scripts\angular.min.1.4.6.js" />
+    <Content Include="Scripts\app\controllers\navigation-controller.js" />
     <Content Include="Scripts\app\controllers\people-controller.js" />
     <Content Include="Scripts\app\controllers\tasks-controller.js" />
     <Content Include="Scripts\app\filters\two-letter-filter.js" />
@@ -333,7 +342,6 @@
     <Content Include="Views\Template\People.cshtml" />
     <Content Include="Views\Template\Notes.cshtml" />
     <None Include="Views\Template\Tasks.cshtml" />
-    <Content Include="Views\Template\_TeamNavigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
